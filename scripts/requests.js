@@ -1,6 +1,6 @@
 // Modern way to fetch data 
 const getPuzzle = async (wordCount) =>{
-    let response = await fetch(`http://puzzle.mead.io/puzzle?wordCount=${wordCount}`) ; 
+    let response = await fetch(`//puzzle.mead.io/puzzle?wordCount=${wordCount}`) ; 
     if(response.status===200){
         const data = await response.json() ; 
         return data.puzzle ; 
@@ -9,7 +9,7 @@ const getPuzzle = async (wordCount) =>{
     }
 }
 const getCountry = async (countryCode) =>{
-    const response = await fetch('http://api.countrylayer.com/v2/all?access_key=1b076e568574f689056b3382ef849dea')
+    const response = await fetch('//api.countrylayer.com/v2/all?access_key=1b076e568574f689056b3382ef849dea')
     if(response){
         let data = await response.json() ; 
         data =  data.find((country) => country.alpha2Code === countryCode) ; 
@@ -20,7 +20,7 @@ const getCountry = async (countryCode) =>{
 
 }
 const getLocation = async  ()=>{
-    const response= await fetch('http://ipinfo.io/json?token=a7de8ab1fad90e')
+    const response= await fetch('//ipinfo.io/json?token=a7de8ab1fad90e')
         if(response){
             let data= await response.json() ; 
             return data ; 
